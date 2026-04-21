@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteWise – Election Education Assistant</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="logo.svg" alt="VoteWise Logo" class="logo">
+                <div>
+                    <h1>VoteWise</h1>
+                    <p>Election Education Assistant</p>
+                </div>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#chatbot">Assistant</a></li>
+                <li><a href="#steps">Steps</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Chatbot Section -->
+        <section id="chatbot" class="card">
+            <h2>Chat with Assistant</h2>
+            <div id="chat-display" class="chat-box">
+                <div class="bot-msg">Hello! I'm VoteWise. Ask me anything about elections (e.g., EVM, NOTA, Eligibility).</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your question here...">
+                <button id="send-btn">Send</button>
+            </div>
+        </section>
+
+        <!-- Election Steps Section -->
+        <section id="steps" class="card">
+            <h2>Election Process Steps</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <span class="step-num">1</span>
+                    <h3>Registration</h3>
+                    <p>Enrolling in the electoral roll to become an eligible voter.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">2</span>
+                    <h3>Nomination</h3>
+                    <p>Candidates filing papers to officially contest the election.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">3</span>
+                    <h3>Campaigning</h3>
+                    <p>Candidates share their manifestos and visions with the voters.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">4</span>
+                    <h3>Voting</h3>
+                    <p>Citizens casting their votes at polling stations.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">5</span>
+                    <h3>Counting</h3>
+                    <p>Processing and tallying the votes cast by citizens.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">6</span>
+                    <h3>Result</h3>
+                    <p>Declaring the winners and formation of the government.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="card">
+            <h2>Election Timeline</h2>
+            <div class="timeline-wrapper">
+                <div class="timeline-horizontal">
+                    <div class="timeline-card">
+                        <div class="time-label">Step 1</div>
+                        <h4>Announcement</h4>
+                        <p>Official notification of election dates.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-label">Step 2</div>
+                        <h4>Nomination</h4>
+                        <p>Candidate filing and verification.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-label">Step 3</div>
+                        <h4>Campaigning</h4>
+                        <p>Public rallies and debates.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-label">Step 4</div>
+                        <h4>Polling Day</h4>
+                        <p>Voters cast their secret ballots.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="time-label">Step 5</div>
+                        <h4>Counting</h4>
+                        <p>Tallying votes and declaring winners.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="card">
+            <h2>Election Quiz</h2>
+            <div id="quiz-intro">
+                <p>Test your knowledge! Take our 5-question quiz about the election process.</p>
+                <button id="start-quiz">Start Quiz</button>
+            </div>
+            
+            <div id="quiz-container" class="hidden">
+                <div class="quiz-header">
+                    <span id="quiz-progress">Question 1 of 5</span>
+                    <div class="progress-bar-bg"><div id="progress-fill"></div></div>
+                </div>
+                <div id="question-area"></div>
+                <div id="quiz-feedback" class="hidden"></div>
+            </div>
+
+            <div id="quiz-results" class="hidden">
+                <div class="result-icon">🏆</div>
+                <h3>Quiz Completed!</h3>
+                <p>Your Score: <span id="score">0</span>/5</p>
+                <div id="score-message"></div>
+                <button id="restart-quiz">Try Again</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 VoteWise – Election Education Assistant</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
